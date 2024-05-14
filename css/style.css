@@ -1,0 +1,242 @@
+:root {
+    --white: white;
+    --darkwhite: #ddd;
+    --gray: #2E2E2E;
+    --blue: #4B01D1;
+    --cream: #EEEEEE;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--blue);
+}
+
+.m-10 {
+    margin: 10px 0;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.alignLeft {
+    display: flex;
+    justify-content: start;
+}
+
+form, .social, .alignCenter, .directionColumn, main, body, article {
+    display: flex;
+}
+
+.directionColumn, form {
+    flex-direction: column;
+}
+
+.alignCenter, main, form {
+    align-items: center;
+    justify-content: center;
+}
+
+.verticalCenter {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    flex-direction: column;
+}
+
+/* ----------header---------- */
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+.headerTop {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.headerTop img {
+    height: 4rem;
+}
+
+/* ----------header nav----------- */
+
+.headerBottom {
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    color: #00000080;
+    font-size: 16px;
+}
+
+.headerBottom > nav > ul > div {
+    height: 30px;
+}
+
+.down-menu li {
+    padding: 8px;
+}
+
+.navLink:hover, .down-menu li:hover {
+    cursor: pointer;
+}
+
+.headerBottom li:hover {
+    color: #F2662B;
+}
+
+header select {
+    width: 50px;
+    background-color: #737277;
+    border: none;
+}
+
+.down-menu, .down-submenu {
+    display: none;
+    flex-direction: column;
+}
+
+.navLink {
+    position: relative;
+    margin: 0 20px;
+}
+
+nav > ul > div:hover {
+    border-bottom: 4px solid #F2662B;
+    color: #F2662B;
+}
+
+.navLink:hover .down-menu {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 250px;
+    background-color: #FFF;
+    color: #00000080;
+}
+
+.navLink:hover > .down-submenu {
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 249px;
+    width: 300px;
+    background-color: #FFF;
+    color: #00000080;
+}
+
+.down-menu li, .down-submenu li {
+    display: block;
+    margin: 5px 0;
+    border-bottom: 1px solid var(--blue);
+}
+
+header i {
+    margin-left: 10px;
+}
+
+/* ----------formulario---------- */
+
+form {
+    margin: 20px;
+    padding: 30px 100px;
+    border: 1px solid #111;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.sidebar {
+    position: fixed;
+    right: 525px;
+    top: -237px;
+    z-index: 999;
+    transition: 0.5s;
+}
+
+.sidebar:hover {
+    top: 270px;
+}
+
+.sidebar:hover .sidebarButton {
+    opacity: 0;
+    /* background-color: red; */
+    transition: opacity .2s;
+    /* transition-delay: 3s; */
+}
+
+.sidebar > form {
+    position: absolute;
+    top: -285px;
+    width: 500px;
+}
+
+.sidebarButton {
+    position: absolute;
+    bottom: -55px;
+    padding: 15px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: opacity 1s;
+}
+
+fieldset {
+    border: 0;
+}
+
+legend {
+    margin-left: 10px;
+}
+
+#email, #password, #user {
+    height: 40px;
+    margin: 3px ;
+    padding: 0 10px;
+    border: 1px solid #111;
+    font-size: 20px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    background-color: var(--cream);
+}
+
+input[type=submit] {
+    margin-top: 50px;
+    color: white;
+    background-color: var(--blue);
+    height: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #4a01d1bb;
+}
