@@ -4,6 +4,7 @@
     --gray: #2E2E2E;
     --blue: #4B01D1;
     --cream: #EEEEEE;
+    --font: #00000090;
 }
 
 * {
@@ -13,7 +14,7 @@
     font-family: arial;
     text-decoration: none;
     list-style-type: none;
-    color: var(--blue);
+    color: var(--font);
 }
 
 .m-10 {
@@ -52,8 +53,10 @@ form, .social, .alignCenter, .directionColumn, main, body, article {
 }
 
 main {
+    position: relative;
     flex-direction: column;
     flex-grow: 1;
+    margin-top: 180px;
 }
 
 html, body {
@@ -64,15 +67,28 @@ body {
     flex-direction: column;
 }
 
+.background {
+    position: absolute;
+    bottom: 0;
+    z-index: -999;
+}
+
+.background img {
+    opacity: .5;
+    max-width: 100%;
+}
+
 /* ----------header---------- */
 
 header {
     position: fixed;
     width: 100%;
+    z-index: 999;
+    box-shadow: 0px 5px 12px 10px white;
 }
 
 .headerTop {
-    background-color: lightblue;
+    background-color: white;
     padding: 20px;
     text-align: center;
 }
@@ -86,13 +102,17 @@ header {
 .headerBottom {
     justify-content: center;
     align-items: center;
-    padding: 8px 16px;
-    color: #00000080;
+    padding: 8px 16px 0;
     font-size: 16px;
+    background-color: white;
 }
 
 .headerBottom > nav > ul > div {
     height: 30px;
+}
+
+.headerBottom li {
+    color: var(--blue);
 }
 
 .down-menu li {
@@ -160,7 +180,7 @@ header i {
 
 /* ----------formulario---------- */
 
-form {
+.signin {
     margin: 20px;
     padding: 30px 100px;
     border: 1px solid #111;
@@ -239,4 +259,47 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: #4a01d1bb;
+}
+
+/* -----------section------------ */
+
+.rowContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-bottom: 60px;
+}
+
+section {
+    border-radius: 10px;
+    width: 25%;
+    color: #00000080;
+    box-shadow: 0 0 10px 0 var(--font);
+    background-color: white;
+}
+
+.attractionImage img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.attractionTitle, .attractionDescription, .attractionSchedule, .attractionForm {
+    padding: 10px 20px;
+}
+
+.attractionForm input {
+    margin: 0;
+}
+
+.attractionSchedule {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ----------footer---------- */
+
+footer {
+    width: 80%;
+    border: 1px solid black;
 }
