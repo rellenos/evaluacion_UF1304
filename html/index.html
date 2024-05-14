@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krustyland</title>
-    <link rel="stylesheet" href="../css/style.css">
     <script type="text/javascript" src="../others/funcions.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -40,7 +41,7 @@
 
                     </div>
                     <div class="navLink">
-                        <li class="navLink">ATRACCIONES<i class="bi bi-caret-down-fill"></i>
+                        <li>ATRACCIONES<i class="bi bi-caret-down-fill"></i>
                             <ul class="down-menu">
                                 <li>Monte Krustmore</li>
                                 <li>Krusty Waterless Waterslide</li>
@@ -64,40 +65,37 @@
                     </div>
                 </ul>
             </nav>
+            <div class="sidebar sidebar-active">
+                <form class="signin" action="">
+                    <div class="sidebarButton">
+                        Acceso Klub
+                    </div>
+                    <div class="alignCenter directionColumn m-10">
+                        <h2>Krusty Klub</h2>
+                        <span class="m-10">¿Es tu primera vez? <a href="./registro.html" target="_blank">Regístrate</a></span>
+                    </div>
+                    <div class="directionColumn alignCenter m-10 w-100">
+                        <fieldset class="alignCenter m-10 w-100">
+                            <legend>Correo</legend>
+                            <input type="email" class="w-100" id="email" placeholder="Correo" required tabindex="1">
+                        </fieldset>
+                        <fieldset class="alignCenter w-100">
+                            <legend>Contraseña</legend>
+                            <input type="password" class="w-100" id="password" placeholder="Contraseña" required tabindex="2">
+                        </fieldset>
+                    </div>
+                    <div class="alignLeft m-10 w-100">
+                        <a href="./password_recovery.html" target="_blank">¿Olvidaste la contraseña?</a>
+                    </div>
+                    <div class="directionColumn m-10 w-100">
+                        <input type="submit" value="Iniciar sesión" class="w-100">
+
+                    </div>
+                </form>
+            </div>
     </header>
     <main>
-        <div class="sidebar sidebar-active">
-            <form class="signin" action="">
-                <div class="sidebarButton">
-                    Acceso Klub
-                </div>
-                <div class="alignCenter directionColumn m-10">
-                    <h2>Krusty Klub</h2>
-                    <span class="m-10">¿Es tu primera vez? <a href="./registro.html" target="_blank">Regístrate</a></span>
-                </div>
-                <div class="directionColumn alignCenter m-10 w-100">
-                    <fieldset class="alignCenter m-10 w-100">
-                        <legend>Correo</legend>
-                        <input type="email" class="w-100" id="email" placeholder="Correo" required tabindex="1">
-                    </fieldset>
-                    <fieldset class="alignCenter w-100">
-                        <legend>Contraseña</legend>
-                        <input type="password" class="w-100" id="password" placeholder="Contraseña" required tabindex="2">
-                    </fieldset>
-                </div>
-                <div class="alignLeft m-10 w-100">
-                    <a href="./password_recovery.html" target="_blank">¿Olvidaste la contraseña?</a>
-                </div>
-                <div class="directionColumn m-10 w-100">
-                    <input type="submit" value="Iniciar sesión" class="w-100">
-                    <span class="alignCenter m-10">o conéctate con</span>
-                    <div class="social alignCenter">
-                        <i class="fa-brands fa-google"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                    </div>
-                </div>
-            </form>
-        </div>
+        
         <!-- <div style="height: 160px;"></div> -->
         <div class="rowContainer">
             <section>
@@ -167,14 +165,14 @@
                     <h2>Monte Krustmore</h2>
                 </div>
                 <div class="attractionDescription">
-                    <p>Monte Krustmore es una montaña rusa en Krustyland; la atracción es una montaña con la cabeza de Krusty el Payaso esculpida en ella, parodiando al Monte Rushmore de EEUU. Dentro de la boca hay una galería de minas por donde pasan los vagones. A veces se escuchan sonidos de Krusty vomitando al pasar por su boca</p>
+                    <p>Monte Krustmore es una montaña rusa en Krustyland; la atracción es una montaña con la cabeza de Krusty el Payaso esculpida en ella, parodiando al Monte Rushmore de EEUU. Dentro de la boca hay una galería de minas por donde pasan los vagones. A veces se escuchan sonidos de Krusty vomitando al pasar por ella</p>
                 </div>
                 <div class="attractionSchedule">
                     <p>09:00 - 24:00</p>
                 </div>
                 <div class="attractionForm">
                     <form action="">
-                        <input type="submit">
+                        <input type="submit" value="Reserva entrada">
                     </form>
                 </div>
             </section>
@@ -193,7 +191,7 @@
                 </div>
                 <div class="attractionForm">
                     <form action="">
-                        <input type="submit">
+                        <input type="submit" value="Reserva entrada">
                     </form>
                 </div>
             </section>
@@ -212,20 +210,61 @@
                 </div>
                 <div class="attractionForm">
                     <form action="">
-                        <input type="submit">
+                        <input type="submit" value="Reserva entrada">
                     </form>
                 </div>
             </section>
         </div>
 
-        <div class="background">
-            <img src="../img/background.webp" alt="">
-        </div>
+        
 
     </main>
     <footer>
-        
+        <div class="newsletter">
+            <h2>Suscribete para informarte sobre cualquier aviso o promoción</h2>
+            <form action="">
+                <input type="text" placeholder="Introduce tu nombre y apellidos" required tabindex="3">
+                <input type="email" placeholder="Introduce tu dirección de email" required tabindex="4">
+                <input type="submit">
+            </form>
+        </div>
+        <nav class="social">
+            <ul>
+                <li><i class="bi bi-twitter-x"></i><span>X</span></li>
+                <li><i class="bi bi-facebook"></i><span>Facebook</span></li>
+                <li><i class="bi bi-instagram"></i><span>Instagram</span></li>
+                <li><i class="bi bi-tiktok"></i><span>TikTok</span></li>
+                <li><i class="bi bi-youtube"></i><span>Youtube</span></li>
+            </ul>
+        </nav>
+        <hr>
+        <nav class="siteMap">
+            <ul>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Entradas</a></li>
+                <li><a href="#">Paquetes</a></li>
+                <li><a href="#">Pases de temporada</a></li>
+                <li><a href="#">Tarifas para grupos</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Monte Krustmore</a></li>
+                <li><a href="#">Krusty Waterless Waterslide</a></li>
+                <li><a href="#">The Tooth Chipper</a></li>
+                <li><a href="#">Sleeping Itchy's Castle</a></li>
+                <li><a href="#">Death Drop</a></li>
+                <li><a href="#">Eyeballs of Death</a></li>
+                <li><a href="#">Twirl 'N' Hurl</a></li>
+                <li><a href="#">Tavern of the Scream</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Hoteles</a></li>
+                <li><a href="#">Horarios</a></li>
+                <li><a href="#">Como llegar</a></li>
+            </ul>
+        </nav>
+        <div class="background">
+            <img src="../img/background.webp" alt="">
+        </div>
     </footer>
-</body>
 <script>includeHTML()</script>
 </html>
