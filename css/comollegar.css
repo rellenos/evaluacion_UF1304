@@ -1,0 +1,26 @@
+section {
+    width: 30%;
+    height: 100%;
+}
+
+.rowContainer {
+    margin: 100px 0 100px;
+}
+
+.sectionDescription {
+    flex-grow: 1;
+}
+
+.sectionImage img {
+    width: 100%;
+    height: 300px;
+    border-radius: 0 0 10px 10px;
+}
+
+.sectionTitle, .sectionDescription {
+    padding: 10px 20px;
+}
+
+iframe {
+    margin-bottom: 100px;
+}

@@ -1,31 +1,17 @@
-.rowContainer {
-    justify-content: space-evenly;
-    width: 80%;
-    margin-bottom: 60px;
-}
-
-section {
-    border-radius: 10px;
-    width: 25%;
-    color: var(--font);
-    box-shadow: 0 0 10px 0 var(--shadow);
-    background-color: var(--white);
-}
-
-.attractionDescription {
+.sectionDescription {
     flex-grow: 1;
 }
 
-.attractionImage img {
+.sectionImage img {
     height: 200px;
     border-radius: 10px 10px 0 0;
 }
 
-.attractionTitle, .attractionDescription, .attractionSchedule, .attractionForm {
+.sectionTitle, .sectionDescription, .sectionSchedule, .sectionForm {
     padding: 10px 20px;
 }
 
-.attractionSchedule {
+.sectionSchedule {
     text-align: center;
     font-weight: 600;
 }

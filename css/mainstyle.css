@@ -1,3 +1,4 @@
+/* Atributs personalitzats */
 :root {
     --white: white;
     --darkwhite: #ddd;
@@ -30,7 +31,7 @@
     height: auto;
 }
 
-.w-100, header, .headerTop, .social ul, .attractionImage img, .background img {
+.w-100, header, .headerTop, .social ul, .sectionImage img, .background img {
     width: 100%;
 }
 
@@ -62,6 +63,7 @@ header, .headerTop, .signin, .newsletter, .newsletter input, .social, .siteMap, 
     position: absolute;
 }
 
+/* el 'flex-grow' del main, junt amb un height 100% de l'html i el body, fa que el contingut del main s'estiri al maxim deixant el footer abaix de la pàgina */
 main {
     flex-grow: 1;
     margin-top: 150px;
@@ -71,20 +73,34 @@ html, body, section {
     height: 100%;
 }
 
+/* Els inputs no tindràs boreres */
 input {
     border: none;
 }
 
+.rowContainer {
+    justify-content: space-evenly;
+    width: 80%;
+    margin-bottom: 60px;
+}
+
+section {
+    border-radius: 10px;
+    width: 25%;
+    color: var(--font);
+    box-shadow: 0 0 10px 0 var(--shadow);
+    background-color: var(--white);
+}
+
 /* ----------HEADER---------- */
 
+/* Estils per al header */
 header {
     position: fixed;
     justify-content: flex-start;
     height: 100px;
     box-shadow: 0px 5px 12px 10px var(--white);
     z-index: 999;
-    /* backdrop-filter: blur(10px); */
-
 }
 
 header nav {
@@ -109,6 +125,7 @@ header li, header li a {
     padding: 8px;
 }
 
+/* headerTop es on està el logo */
 .headerTop {
     height: 70px;
     z-index: 100;
