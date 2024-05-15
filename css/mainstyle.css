@@ -20,6 +20,8 @@
     color: var(--font);
 }
 
+/* ----------GENERALES---------- */
+
 .m-10 {
     margin: 10px 0px;
 }
@@ -28,11 +30,11 @@
     height: auto;
 }
 
-.w-100 {
+.w-100, header, .headerTop, .social ul, .attractionImage img, .background img {
     width: 100%;
 }
 
-.verticalCenter, .displayFlex, header, header nav, header nav ul, .alignLeft, form, .social, .alignCenter, .directionColumn, main, body, article {
+.verticalCenter, .displayFlex, header, header nav, header nav ul, .alignLeft, form, .social, .alignCenter, .directionColumn, main, body, article, footer, .newsletter, .social ul, .social li, .siteMap, .rowContainer, section {
     display: flex;
 }
 
@@ -40,7 +42,7 @@
     justify-content: start;
 }
 
-.directionColumn, form, header, .down-menu, .down-submenu {
+.directionColumn, main, body, form, header, .down-menu, .down-submenu, .newsletter, footer, section {
     flex-direction: column;
 }
 
@@ -48,25 +50,25 @@
     justify-content: center;
 }
 
-.verticalCenter, .alignCenter, main, form, header nav ul {
+.verticalCenter, .alignCenter, main, form, header nav ul, .social li, .newsletter {
     align-items: center;
 }
 
+header, .headerTop, .signin, .newsletter, .newsletter input, .social, .siteMap, .down-menu, .down-submenu {
+    background-color: var(--white);
+}
+
+.navLink:hover .down-menu, .navLink:hover > .down-submenu, .sidebar > form, .sidebarButton, .background {
+    position: absolute;
+}
+
 main {
-    /* position: relative; */
-    flex-direction: column;
     flex-grow: 1;
-    margin-top: 180px;
-    z-index: 10;
+    margin-top: 150px;
 }
 
-html, body {
+html, body, section {
     height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
 }
 
 input {
@@ -79,10 +81,10 @@ header {
     position: fixed;
     justify-content: flex-start;
     height: 100px;
-    width: 100%;
-    background-color: var(--white);
     box-shadow: 0px 5px 12px 10px var(--white);
     z-index: 999;
+    /* backdrop-filter: blur(10px); */
+
 }
 
 header nav {
@@ -99,7 +101,7 @@ header img {
     margin: auto;
 }
 
-header li {
+header li, header li a {
     color: var(--blue);
 }
 
@@ -108,13 +110,11 @@ header li {
 }
 
 .headerTop {
-    width: 100%;
     height: 70px;
-    background-color: var(--white);
     z-index: 100;
 }
 
-header li:hover > i, header li:hover {
+header li:hover > i, header li:hover, header li a:hover {
     color: var(--orange);
 }
 
@@ -130,7 +130,7 @@ header li:hover > i, header li:hover {
     box-shadow: 0px 1500px 0px 1500px var(--shadow);
 }
 
-.navLink, .sidebar {
+.navLink, .sidebar, footer {
     position: relative;
 }
 
@@ -141,21 +141,17 @@ header nav > ul > div:hover {
 
 .navLink:hover .down-menu {
     display: block;
-    position: absolute;
     top: 22px;
     left: 0px;
     width: 250px;
-    background-color: var(--white);
     color: var(--blue);
 }
 
 .navLink:hover > .down-submenu {
     display: block;
-    position: absolute;
     top: 0px;
     left: 249px;
     width: 300px;
-    background-color: var(--white);
     color: var(--blue);
 }
 
@@ -186,7 +182,6 @@ header nav ul {
     padding: 30px;
     border: 1px solid var(--gray);
     border-radius: 10px;
-    background-color: var(--white);
 }
 
 form {
@@ -209,13 +204,11 @@ form {
 }
 
 .sidebar > form {
-    position: absolute;
     top: -285px;
     width: 350px;
 }
 
 .sidebarButton {
-    position: absolute;
     bottom: -30px;
     left: 10px;
     padding: 7px 15px;
@@ -250,7 +243,7 @@ input:focus {
     background-color: var(--cream);
 }
 
-.sidebar input[type="submit"], section input[type="submit"] {
+input[type="submit"] {
     margin-top: 50px;
     color: var(--white);
     background-color: var(--orange);
@@ -266,82 +259,31 @@ input[type="submit"]:hover {
     background-color: var(--input);
 }
 
-
-/* -----------section------------ */
-
-.rowContainer {
-    display: flex;
-    justify-content: space-evenly;
-    width: 80%;
-    margin-bottom: 60px;
-}
-
-section {
-    border-radius: 10px;
-    width: 25%;
-    color: #00000080;
-    box-shadow: 0 0 10px 0 var(--font);
-    background-color: white;
-}
-
-.attractionImage img {
-    width: 100%;
-    height: 200px;
-    border-radius: 10px 10px 0 0;
-}
-
-.attractionTitle, .attractionDescription, .attractionSchedule, .attractionForm {
-    padding: 10px 20px;
-}
-
-.attractionForm input {
-    margin: 0;
-}
-
-.attractionSchedule {
-    text-align: center;
-    font-weight: 600;
-}
-
-/* ----------footer---------- */
+/* ----------FOOTER---------- */
 
 footer {
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    position: relative;
-    /* background-color: white; */
     align-content: center;
-    
 }
 
 .newsletter {
     padding-top: 20px;
-    background-color: white;
-}
-
-.newsletter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .newsletter form {
-    background-color: var(--blue);
-    border-radius: 20px;
     display: inline-block;
     margin-top: 20px;
     padding: 40px 0;
+    border-radius: 20px;
+    background-color: var(--blue);
 }
 
 .newsletter input {
+    height: 50px;
     margin: 0 20px;
     padding: 0 20px;
-    height: 50px;
     border-radius: 50px;
-    background-color: white;
     font-size: 1.3em;
-    
 }
 
 footer form input[type=text], footer form input[type=email] {
@@ -351,51 +293,39 @@ footer form input[type=text], footer form input[type=email] {
 footer form input[type=submit] {
     width: 100px;
     background-color: var(--orange);
-    color: white;
 }
 
 .social {
     width: 80%;
-    background-color: white;
     padding: 50px 0 30px;
 }
 
 .social ul {
-    display: flex;
-    font-size: 1.2em;
-    width: 100%;
-    color: black;
     justify-content: space-evenly;
-}
-
-.social li {
-    display: flex;
-    align-items: center;
+    font-size: 1.2em;
+    color: var(--font);
 }
 
 footer i {
-    color: black;
     width: 40px;
     font-size: 1.6em;
+    color: var(--font);
 }
 
 .background {
-    position: absolute;
     bottom: 0;
     z-index: -999;
 }
 
 .background img {    
     opacity: .6;
-    max-width: 100%;
 }
 
 .siteMap {
-    display: flex;
-    background-color: white;
     justify-content: space-evenly;
-    padding: 20px 0;
     margin-bottom: 50px;
+    padding: 20px 0;
+    background-color: var(white);
 }
 
 .siteMap li {
@@ -403,7 +333,7 @@ footer i {
 }
 
 .siteMap li a {
-    color: #000;
+    color: var(--font);
 }
 
 .siteMap li a:hover {
