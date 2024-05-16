@@ -1,0 +1,12 @@
+fieldset {
+    border: 0;
+}
+
+legend {
+    margin-left: 10px;
+}
+
+.register {
+    width: 40%;
+    background-color: var(--white);
+}

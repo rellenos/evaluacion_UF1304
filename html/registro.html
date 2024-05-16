@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <script type="text/javascript" src="../others/functions.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/mainstyle.css">
+    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+    <div variable="../snippets/header.html" class="header"></div>
+    <div variable="../snippets/mobileheader.html" class="mobileheader"></div>
+    <main>
+        <form class="register" action="">
+            <h2>¡Registrate en el Krusty Klub!</h2>
+            <div class="directionColumn alignCenter m-10 w-100">
+                <fieldset class="w-100 m-10">
+                    <legend>Usuario</legend>
+                    <input type="text" id="user" class="w-100" placeholder="Usuario" minlength="6" required tabindex="3">
+                </fieldset>
+                <fieldset class="w-100 m-10">
+                    <legend>Correo</legend>
+                    <input type="text" id="email" class="w-100" placeholder="Correo" required tabindex="4">
+                </fieldset>
+                <fieldset class="w-100 m-10">
+                    <legend>Repite el correo</legend>
+                    <input type="text" id="email" class="w-100" placeholder="Repite el correo" required tabindex="5">
+                </fieldset>
+                <fieldset class="w-100 m-10">
+                    <legend>Contraseña</legend>
+                    <input type="password" id="password" class="w-100" placeholder="Contraseña" minlength="8" required tabindex="6">
+                </fieldset>
+                <fieldset class="w-100 m-10">
+                    <legend>Repite la contraseña</legend>
+                    <input type="password" id="password" class="w-100" placeholder="Repite la contraseña" minlength="8" required tabindex="7">
+                </fieldset>
+            </div>
+            <div>
+                <input type="checkbox" id="checkbox1" class="m-10" required><label for="checkbox1">Acepto los <a href="#">términos y condiciones</a></label>
+            </div>
+            <div>
+                <input type="checkbox" id="checkbox2" class="m-10"><label for="checkbox2">Deseo recibir avisos por correo electónico</label>
+            </div>
+            <input type="submit" value="Registrarse" class="w-100">
+        </form>
+    </main>
+
+    <div variable="../snippets/footer.html"></div>
+</body>
+<script>includeHTML()</script>
+</html>

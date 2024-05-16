@@ -23,6 +23,10 @@
 
 /* ----------GENERALES---------- */
 
+.mobileheader {
+    display: none;
+}
+
 .m-10 {
     margin: 10px 0px;
 }
@@ -188,13 +192,13 @@ header nav ul {
     width: 50%;
 }
 
-.navLink, .down-menu li, .sidebarButton, input[type="submit"] {
+.navLink, .down-menu li, .sidebarButton, input[type="submit"], .social li {
     cursor: pointer;
 }
 
 /* ----------FORMULARIO HEADER---------- */
 
-.signin {
+.signin, .register {
     margin: 20px;
     padding: 30px;
     border: 1px solid var(--gray);
@@ -207,7 +211,7 @@ form {
 
 .sidebar {
     right: 0px;
-    top: -210px;
+    top: -160px;
     transition: all 0.5s ease 0s;
 }
 
@@ -261,7 +265,7 @@ input:focus {
 }
 
 input[type="submit"] {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     color: var(--white);
     background-color: var(--orange);
     height: auto;
@@ -303,6 +307,7 @@ footer {
     font-size: 1.3em;
 }
 
+
 footer form input[type=text], footer form input[type=email] {
     width: 350px;
 }
@@ -312,8 +317,22 @@ footer form input[type=submit] {
     background-color: var(--orange);
 }
 
+footer form input[type=checkbox] {
+    width: 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer form p, footer form a {
+    color: var(--white);
+}
+
+.checkboxPanel {
+    justify-content: start;
+    margin-top: 20px;
+}
+
 .social {
-    width: 80%;
     padding: 50px 0 30px;
 }
 
@@ -342,7 +361,6 @@ footer i {
     justify-content: space-evenly;
     margin-bottom: 50px;
     padding: 20px 0;
-    background-color: var(white);
 }
 
 .siteMap li {
@@ -353,6 +371,6 @@ footer i {
     color: var(--font);
 }
 
-.siteMap li a:hover {
+.siteMap li a:hover, form a:hover, footer form a {
     text-decoration: underline;
 }
