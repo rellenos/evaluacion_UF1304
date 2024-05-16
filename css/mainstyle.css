@@ -23,6 +23,7 @@
 
 /* ----------GENERALES---------- */
 
+/* quan la pàgina es visualitzi en l'ordinador, el diseny de header del mòbil romandrà ocult  */
 .mobileheader {
     display: none;
 }
@@ -82,12 +83,14 @@ input {
     border: none;
 }
 
+/* caixa divisoria amb propietat row y un petit marge */
 .rowContainer {
     justify-content: space-evenly;
     width: 80%;
     margin-bottom: 60px;
 }
 
+/* estils de les caixes de contingut */
 section {
     border-radius: 10px;
     width: 25%;
@@ -125,9 +128,7 @@ header li, header li a {
     color: var(--blue);
 }
 
-.down-menu li {
-    padding: 8px;
-}
+
 
 /* headerTop es on està el logo */
 .headerTop {
@@ -143,6 +144,12 @@ header li:hover > i, header li:hover, header li a:hover {
     transform: rotate(180deg);
 }
 
+/* down-menu es el menu deplegable de navegació en el header */
+.down-menu li {
+    padding: 8px;
+}
+
+/* i down-submenu son els menus desplegables d'aquestos menus, que tenen altres propietats */
 .down-menu, .down-submenu {
     display: none;
 }
@@ -151,6 +158,7 @@ header li:hover > i, header li:hover, header li a:hover {
     box-shadow: 0px 1500px 0px 1500px var(--shadow);
 }
 
+/* navlink indica quines seccions tindran un menu depslegable */
 .navLink, .sidebar, footer {
     position: relative;
 }
@@ -198,6 +206,7 @@ header nav ul {
 
 /* ----------FORMULARIO HEADER---------- */
 
+/* estils per als diferents formularis */
 .signin, .register {
     margin: 20px;
     padding: 30px;
@@ -209,6 +218,7 @@ form {
     z-index: 90;
 }
 
+/* sidebar es el formulari que es desplega quan pases el cursor per "acceso klub" */
 .sidebar {
     right: 0px;
     top: -160px;
@@ -260,12 +270,12 @@ input:focus {
     outline: none;
 }
 
+/* estils per al distints inputs */
 .sidebar input[type="text"], .sidebar input[type="email"], .sidebar input[type="password"] {
     background-color: var(--cream);
 }
 
 input[type="submit"] {
-    /* margin-top: 50px; */
     color: var(--white);
     background-color: var(--orange);
     height: auto;
@@ -307,7 +317,6 @@ footer {
     font-size: 1.3em;
 }
 
-
 footer form input[type=text], footer form input[type=email] {
     width: 350px;
 }
@@ -348,6 +357,7 @@ footer i {
     color: var(--font);
 }
 
+/* estils per al fons la pagina, situat abaix del tot i amb una opacitat */
 .background {
     bottom: 0;
     z-index: -999;
